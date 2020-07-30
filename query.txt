@@ -1,1 +1,7 @@
+## downloads by asset and date
+
 select asset_name, capture_date_utc, count from download_stats group by asset_name, capture_date_utc, count order by asset_name asc, capture_date_utc asc;
+
+## total downloads by date
+
+select capture_date_utc, sum(count) from download_stats group by capture_date_utc order by capture_date_utc desc;
